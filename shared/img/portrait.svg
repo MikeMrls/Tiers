@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Silhouette portrait of Adrian W. Mercer">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#f4eee3"/>
+      <stop offset="1" stop-color="#e2d8c6"/>
+    </radialGradient>
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="4"/>
+      <feColorMatrix values="0 0 0 0 .35  0 0 0 0 .3  0 0 0 0 .24  0 0 0 .09 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <rect width="400" height="500" fill="#fff" filter="url(#paper)"/>
+  <ellipse cx="236" cy="246" rx="158" ry="200" fill="none" stroke="#1d1b18" stroke-opacity=".18" stroke-width="1.2"/>
+  <path fill="#1d1b18" d="
+    M 30 500
+    C 34 450 80 420 140 408
+    C 162 402 172 394 174 380
+    C 176 366 176 354 172 344
+    C 150 330 128 300 120 262
+    C 110 210 124 156 168 124
+    C 200 100 250 92 290 106
+    C 316 116 330 134 334 160
+    C 337 180 338 200 340 214
+    C 341 220 338 226 340 232
+    C 348 250 360 266 368 280
+    C 371 286 368 292 360 293
+    C 354 294 350 295 348 298
+    C 349 304 352 309 351 313
+    C 350 317 345 318 345 321
+    C 349 324 351 329 348 333
+    C 345 337 340 338 340 342
+    C 342 348 348 354 346 362
+    C 343 372 330 376 316 377
+    C 300 378 290 380 286 386
+    C 288 402 292 418 300 432
+    C 320 450 360 462 392 474
+    C 398 480 400 490 400 500
+    Z"/>
+  <!-- collar -->
+  <path d="M300 432 C 296 452 288 472 276 490 M300 432 C 322 450 350 462 380 472" fill="none" stroke="#e9e1d2" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+  <!-- hair texture at crown -->
+  <path d="M180 128 C 216 112 262 110 300 124 M168 144 C 206 128 254 126 296 140" fill="none" stroke="#e9e1d2" stroke-opacity=".08" stroke-width="2"/>
+  <!-- ear -->
+  <path d="M214 240 C 204 230 192 236 194 252 C 196 268 208 276 218 270" fill="none" stroke="#e9e1d2" stroke-opacity=".14" stroke-width="2" stroke-linecap="round"/>
+</svg>

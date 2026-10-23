@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adrian W. Mercer | Website Tiers</title>
+  <meta name="description" content="Three website tiers for author Adrian W. Mercer: a single-page site, a multi-page site with motion, and a fully custom experience.">
+  <link rel="canonical" href="https://mikemrls.github.io/Tiers/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Adrian W. Mercer | Website Tiers">
+  <meta property="og:description" content="Three website tiers for author Adrian W. Mercer.">
+  <meta property="og:url" content="https://mikemrls.github.io/Tiers/">
+  <meta property="og:image" content="https://mikemrls.github.io/Tiers/shared/img/og/tier-2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="shared/img/favicon.svg" type="image/svg+xml">
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300 700;
+      font-display: swap;
+      src: url(shared/fonts/inter-normal-300-700.woff2) format('woff2');
+    }
+
+    :root {
+      --bg: #ffffff;
+      --tile: #d9d9d9;
+      --ink: #111111;
+      --muted: #6b6b6b;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 48px 16px;
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    .tiers {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 260px));
+      gap: clamp(28px, 5vw, 64px);
+    }
+
+    .tier {
+      display: grid;
+      justify-items: center;
+      gap: 22px;
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+    }
+
+    .thumb {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--tile);
+      transition: transform .45s cubic-bezier(.2, .7, .2, 1), box-shadow .45s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .8s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .name {
+      font-size: 1.35rem;
+      font-weight: 400;
+      letter-spacing: -.005em;
+    }
+
+    .tier:hover .thumb,
+    .tier:focus-visible .thumb {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 40px -18px rgba(0, 0, 0, .35);
+    }
+
+    .tier:hover .thumb img,
+    .tier:focus-visible .thumb img { transform: scale(1.04); }
+
+    .tier:focus-visible .thumb { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+    @media (max-width: 720px) {
+      .tiers { grid-template-columns: minmax(0, 300px); gap: 40px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .thumb, .thumb img { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="sr-only">Adrian W. Mercer website tiers</h1>
+    <ul class="tiers">
+      <li>
+        <a class="tier" href="tier-1/" target="_blank" rel="noopener" aria-label="Tier 1: single-page site (opens in a new tab)">
+          <span class="thumb"><img src="assets/thumbs/tier-1.jpg" width="560" height="560" alt=""></span>
+          <span class="name">Tier 1</span>
+        </a>
+      </li>
+      <li>
+        <a class="tier" href="tier-2/" target="_blank" rel="noopener" aria-label="Tier 2: multi-page site with motion (opens in a new tab)">
+          <span class="thumb"><img src="assets/thumbs/tier-2.jpg" width="560" height="560" alt=""></span>
+          <span class="name">Tier 2</span>
+        </a>
+      </li>
+      <li>
+        <a class="tier" href="tier-3/" target="_blank" rel="noopener" aria-label="Tier 3: custom, motion-driven site (opens in a new tab)">
+          <span class="thumb"><img src="assets/thumbs/tier-3.jpg" width="560" height="560" alt=""></span>
+          <span class="name">Tier 3</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
