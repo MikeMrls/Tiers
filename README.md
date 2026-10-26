@@ -66,6 +66,12 @@ tier-3/               Custom site, assets/style.css + assets/app.js
 - **Email:** search for `adrian@adrianwmercer.com`.
 - **Social links:** they point to each platform's home page. Replace them with the author's profile URLs.
 - **Retailer links:** they are title searches. Replace them with direct product URLs or affiliate links.
+- **Retailer logos** live in `shared/img/retailers/`:
+  - **Amazon and eBay:** official wordmarks, from the MIT-licensed thesvg set.
+  - **Walmart:** the CC0 wordmark from simple-icons.
+  - **Barnes & Noble:** traced from a small official raster.
+  - **Books-A-Million:** a typographic stand-in.
+  - For production, swap in each retailer's official files from its affiliate or brand program, keeping the same filenames.
 - **Email capture:** add `data-endpoint="https://..."` to `form[data-lead]` (Tier 2) or `form[data-letterbox]` (Tier 3) to post sign-ups to Mailchimp, ConvertKit, Formspree, or similar. Without an endpoint, the form unlocks the download directly.
 - **Audiobook sample:** it uses the browser's built-in speech voice. For a studio recording, swap the player to an `<audio>` source.
 - **Open Graph URLs:** these are absolute (`https://mikemrls.github.io/Tiers/...`). Update them if the site moves to a custom domain.

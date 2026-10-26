@@ -87,7 +87,7 @@
           </div>
           
         </div>
-        <aside id="buy" class="sticky-aside" data-reveal>
+        <aside class="sticky-aside" data-reveal>
           <p class="label num">Formats</p>
           <ul class="formats">
             <li><span>Paperback</span><span>352 pages</span></li>
@@ -95,15 +95,24 @@
             <li><span>Audiobook</span><span>11 hr 5 min, read by the author</span></li>
             <li><span>Hardcover</span><span>First edition, out of print</span></li>
           </ul>
-          <p class="label num">Where to buy</p>
-          <ul class="buy-list">
-            <li><a href="https://www.amazon.com/s?k=The+Architecture+of+Silence+Adrian+W.+Mercer&amp;i=stripbooks" target="_blank" rel="noopener">Amazon</a></li>
-            <li><a href="https://www.barnesandnoble.com/s/The+Architecture+of+Silence+Adrian+W.+Mercer" target="_blank" rel="noopener">Barnes &amp; Noble</a></li>
-            <li><a href="https://www.walmart.com/search?q=The+Architecture+of+Silence+Adrian+W.+Mercer" target="_blank" rel="noopener">Walmart</a></li>
-            <li><a href="https://www.ebay.com/sch/i.html?_nkw=The+Architecture+of+Silence+Adrian+W.+Mercer" target="_blank" rel="noopener">eBay</a></li>
-            <li><a href="https://www.booksamillion.com/search?query=The+Architecture+of+Silence+Adrian+W.+Mercer" target="_blank" rel="noopener">Books-A-Million</a></li>
-          </ul>
+          <div class="btn-row" style="margin-top:0">
+            <a class="btn btn-solid" href="https://www.amazon.com/s?k=The+Architecture+of+Silence+Adrian+W.+Mercer&amp;i=stripbooks" target="_blank" rel="noopener">Buy on Amazon <span aria-hidden="true">&nearr;</span></a>
+            <a class="btn" href="#buy">All retailers</a>
+          </div>
         </aside>
+      </div>
+    </section>
+
+    <section id="buy" class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head"><p class="label">Where to buy</p><div><h2 data-reveal><span class="thin">Find it</span> <span class="heavy">on the shelf.</span></h2><p data-reveal style="--d:100ms">Each retailer opens in a new tab.</p></div></div>
+        <ul class="retailer-grid">
+            <li><a class="logo-amazon" href="https://www.amazon.com/s?k=The+Architecture+of+Silence+Adrian+W.+Mercer&amp;i=stripbooks" target="_blank" rel="noopener" aria-label="Buy on Amazon (opens in a new tab)"><img src="../../shared/img/retailers/amazon.svg" width="99" height="30" alt="Amazon"></a></li>
+            <li><a class="logo-barnes-noble" href="https://www.barnesandnoble.com/s/The+Architecture+of+Silence+Adrian+W.+Mercer" target="_blank" rel="noopener" aria-label="Buy on Barnes &amp; Noble (opens in a new tab)"><img src="../../shared/img/retailers/barnes-noble.svg" width="63" height="38" alt="Barnes &amp; Noble"></a></li>
+            <li><a class="logo-walmart" href="https://www.walmart.com/search?q=The+Architecture+of+Silence+Adrian+W.+Mercer" target="_blank" rel="noopener" aria-label="Buy on Walmart (opens in a new tab)"><img src="../../shared/img/retailers/walmart.svg" width="98" height="24" alt="Walmart"></a></li>
+            <li><a class="logo-ebay" href="https://www.ebay.com/sch/i.html?_nkw=The+Architecture+of+Silence+Adrian+W.+Mercer" target="_blank" rel="noopener" aria-label="Buy on eBay (opens in a new tab)"><img src="../../shared/img/retailers/ebay.svg" width="80" height="32" alt="eBay"></a></li>
+            <li><a class="logo-books-a-million" href="https://www.booksamillion.com/search?query=The+Architecture+of+Silence+Adrian+W.+Mercer" target="_blank" rel="noopener" aria-label="Buy on Books-A-Million (opens in a new tab)"><img src="../../shared/img/retailers/books-a-million.svg" width="139" height="16" alt="Books-A-Million"></a></li>
+          </ul>
       </div>
     </section>
 
@@ -141,19 +150,23 @@
     <section class="section">
       <div class="wrap">
         <div class="sec-head"><p class="label">Reviews</p><div><h2 data-reveal><span class="thin">What readers</span> <span class="heavy">say.</span></h2></div></div>
-        <div class="review-stack">
-          <div class="review-row" data-reveal>
+        <div class="review-grid">
+          <figure class="review-card" data-reveal style="--d:0ms">
+            <figcaption><span class="rc-avatar" aria-hidden="true">LL</span><span class="rc-who"><strong>The Lantern Literary Supplement</strong><span>Critic review</span></span></figcaption>
             <blockquote>Mercer writes about houses the way other novelists write about people: with tenderness, suspicion, and a long memory.</blockquote>
-            <p class="who label">The Lantern Literary Supplement</p>
-          </div>
-          <div class="review-row" data-reveal>
+          </figure>
+          <figure class="review-card" data-reveal style="--d:100ms">
+            <figcaption><span class="rc-avatar" aria-hidden="true">MB</span><span class="rc-who"><strong>Meridian Books Weekly</strong><span>Critic review</span></span></figcaption>
             <blockquote>A debut of rare patience. The letters under the stairs will stay with you long after the last page.</blockquote>
-            <p class="who label">Meridian Books Weekly</p>
-          </div>
-          <div class="review-row" data-reveal>
+          </figure>
+          <figure class="review-card" data-reveal style="--d:0ms">
+            <figcaption><span class="rc-avatar" aria-hidden="true">PS</span><span class="rc-who"><strong>Priya S.</strong><span>Reader review &middot; <span class="stars" role="img" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span></span></span></figcaption>
             <blockquote>Slow in the best way. I read the last fifty pages in one sitting and then sat in silence for a while.</blockquote>
-            <p class="who label">Priya S.<br><span class="stars" aria-label="4 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734;</span> Reader review</p>
-          </div>
+          </figure>
+          <figure class="review-card" data-reveal style="--d:100ms">
+            <figcaption><span class="rc-avatar" aria-hidden="true">MK</span><span class="rc-who"><strong>Martin K.</strong><span>Reader review &middot; <span class="stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span></span></figcaption>
+            <blockquote>My book club talked about the house for two hours. Nobody wanted to leave.</blockquote>
+          </figure>
         </div>
         <p style="margin-top:40px"><a class="link-u label" href="../reviews.html">All reviews <span aria-hidden="true">&rarr;</span></a></p>
       </div>

@@ -229,58 +229,68 @@ section { scroll-margin-top: var(--header-h); }
   text-underline-offset: 4px;
 }
 
-/* Reviews */
-.reviews {
+/* Reviews: avatar, name, source, then the review */
+.review-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
   margin-top: 40px;
 }
-.review {
+.review-card {
   margin: 0;
-  padding: 28px 0 0;
-  border-top: 2px solid var(--ink);
+  padding: 28px 30px 30px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
 }
-.review blockquote {
-  margin: 0 0 18px;
+.review-card figcaption { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.rc-avatar {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #fff;
   font-family: var(--serif);
-  font-size: 1.15rem;
-  line-height: 1.55;
-}
-.review figcaption { font-weight: 600; font-size: .9rem; }
-.review figcaption span { display: block; font-weight: 400; color: var(--muted); }
-
-/* Where to buy */
-.buy-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: center;
-}
-.buy-grid p { color: #d5dccf; max-width: 46ch; }
-.retailers {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.retailers li:last-child:nth-child(odd) { grid-column: 1 / -1; }
-.retailers a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 56px;
-  padding: 0 20px;
-  border: 1px solid rgba(246, 242, 232, .35);
-  border-radius: 4px;
-  color: #f6f2e8;
-  text-decoration: none;
   font-weight: 600;
+  font-size: 1.1rem;
 }
-.retailers a::after { content: '\2197'; font-weight: 400; opacity: .7; }
-.retailers a:hover { background: #f6f2e8; color: var(--accent); border-color: #f6f2e8; }
+.rc-who { display: grid; gap: 2px; min-width: 0; }
+.rc-who strong { font-size: 1rem; }
+.rc-who > span { font-size: .85rem; color: var(--muted); }
+.rc-who .stars { color: var(--gold); letter-spacing: .08em; }
+.review-card blockquote {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.6;
+}
+
+/* Where to buy: logo buttons, three across with the rest centered below */
+.buy-block { text-align: center; }
+.buy-block p { color: #d5dccf; max-width: 52ch; margin-inline: auto; }
+.retailer-grid {
+  list-style: none;
+  margin: 36px auto 0;
+  padding: 0;
+  max-width: 680px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+.retailer-grid li { flex: 0 0 calc((100% - 28px) / 3); }
+.retailer-grid a {
+  display: grid;
+  place-items: center;
+  height: 76px;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+.retailer-grid a:hover { border-color: var(--gold); }
 
 /* Contact */
 .contact { text-align: center; }
@@ -333,8 +343,7 @@ section { scroll-margin-top: var(--header-h); }
   .hero-cover { max-width: 300px; }
   .portrait { max-width: 280px; }
   .book-list { grid-template-columns: 1fr; }
-  .reviews { grid-template-columns: 1fr; gap: 24px; }
-  .buy-grid { grid-template-columns: 1fr; gap: 32px; }
+  .review-grid { grid-template-columns: 1fr; }
 }
 
 /* Mobile */
@@ -361,6 +370,7 @@ section { scroll-margin-top: var(--header-h); }
   .section { padding: 72px 0; }
   .book { grid-template-columns: 110px 1fr; gap: 20px; }
   .facts div { grid-template-columns: 1fr; gap: 2px; }
-  .retailers { grid-template-columns: 1fr; }
+  .retailer-grid li { flex-basis: calc((100% - 14px) / 2); }
+  .review-card { padding: 22px 22px 24px; }
   .btn { flex: 1 1 auto; }
 }
