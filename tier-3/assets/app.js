@@ -528,42 +528,5 @@
     });
   });
 
-  /* ---------- Letterbox: lead magnet signup ---------- */
-  // Set data-endpoint on the form (Mailchimp, ConvertKit, Formspree, etc.) to
-  // send the address to a real list. Without one the download unlocks directly.
-  var KEY = 'awm-free-chapter';
-  function remembered() { try { return localStorage.getItem(KEY) === '1'; } catch (err) { return false; } }
-  function remember() { try { localStorage.setItem(KEY, '1'); } catch (err) { /* storage unavailable */ } }
-  $$('form[data-letterbox]').forEach(function (form) {
-    var box = form.closest('.letterbox');
-    var envelope = $('.envelope', box);
-    var done = $('.signup-done', box);
-    var input = $('input[type="email"]', form);
-    var msg = $('.form-msg', form);
-    var button = $('button[type="submit"]', form);
-    function open() { form.hidden = true; done.hidden = false; envelope.classList.add('is-open'); }
-    if (remembered()) open();
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(input.value.trim());
-      input.setAttribute('aria-invalid', String(!ok));
-      if (!ok) { msg.textContent = 'That address doesn’t look quite right.'; input.focus(); return; }
-      msg.textContent = '';
-      button.disabled = true;
-      var endpoint = form.getAttribute('data-endpoint');
-      var req = endpoint
-        ? fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-        : Promise.resolve();
-      req.then(function (res) {
-        if (res && !res.ok) throw new Error('Signup failed');
-        remember();
-        open();
-      }).catch(function () {
-        button.disabled = false;
-        msg.textContent = 'Something went wrong. Please try again.';
-      });
-    });
-  });
-
   requestTick();
 })();
